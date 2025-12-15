@@ -10,6 +10,49 @@ Built with performance, security, and permissionless access in mind, this applic
 
 ---
 
+## 📸 Product Overview
+
+### 1. Landing Page
+The gateway to the ecosystem, featuring localized Indonesian aesthetics (Batik motifs) and real-time market data.
+
+![Landing Page](https://via.placeholder.com/800x450/0f172a/ef4444?text=Nusantara+Bridge+Landing+Page)
+
+### 2. Permissionless Dashboard
+A unified view of your cross-chain assets with an integrated bridging interface. No KYC required for the UI.
+
+![Dashboard Interface](https://via.placeholder.com/800x450/1e293b/3b82f6?text=Dashboard+and+Swap+Interface)
+
+---
+
+## 🎮 Demo Walkthrough
+
+Experience the flow of bridging assets from an EVM wallet to a local Bank BCA account:
+
+1.  **Connect Wallet**: 
+    - Click **"Connect Wallet"** on the top right.
+    - The app authenticates via `viem` (simulating a MetaMask connection).
+    - *Note: No sign-up or KYC forms are required to access the dashboard.*
+
+2.  **Analyze Market with AI**:
+    - Select **Ethereum** network.
+    - Enter `1.5 ETH` in the "From" field.
+    - **Google Gemini AI** automatically analyzes the `ETH/IDR` chart and provides a trading recommendation (e.g., *"Volatility is high, consider waiting"* or *"Good rate based on 7-day avg"*).
+
+3.  **Execute Bridge**:
+    - Select **BCA** as the destination bank.
+    - Input the account number.
+    - Click **"Confirm Swap"**.
+
+4.  **Real-Time Settlement Tracking**:
+    - The transaction appears in the "Recent Transactions" table.
+    - Watch the status update live:
+        1.  `PENDING_DEPOSIT`: Waiting for blockchain confirmation.
+        2.  `DEPOSIT_CONFIRMED`: Assets received by the bridge smart contract.
+        3.  `EXCHANGED`: Assets sold on **Indodax** for IDR.
+        4.  `PAYOUT_INITIATED`: IDR sent via **Xendit** to the user's bank.
+
+---
+
 ## 🏗 Architecture
 
 The system follows an event-driven architecture to bridge on-chain assets to off-chain fiat currency.
